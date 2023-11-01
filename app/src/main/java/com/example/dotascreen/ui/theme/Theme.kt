@@ -40,7 +40,7 @@ object AppTheme {
     }
 
     object ButtonColors {
-        val main
+        val primary
             @Composable
             get() =
                 Color("#F4D144".toColorInt())
@@ -87,12 +87,26 @@ object AppTheme {
                         LineHeightStyle.Trim.None,
                     ),
                 )
+        val Bold_20_24
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp,
+                    lineHeight = 24.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None,
+                    ),
+                )
         val Regular_12_19
             @Composable
             get() =
                 TextStyle(
                     fontFamily = FontFamily,
-                    fontWeight = FontWeight.Medium,
+                    fontWeight = FontWeight.Normal,
                     fontSize = 12.sp,
                     lineHeight = 19.sp,
                     platformStyle = PlatformTextStyle(includeFontPadding = false),
@@ -106,7 +120,7 @@ object AppTheme {
             get() =
                 TextStyle(
                     fontFamily = FontFamily,
-                    fontWeight = FontWeight.Medium,
+                    fontWeight = FontWeight.Normal,
                     fontSize = 10.sp,
                     lineHeight = 12.sp,
                     platformStyle = PlatformTextStyle(includeFontPadding = false),
