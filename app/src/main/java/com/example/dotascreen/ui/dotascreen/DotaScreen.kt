@@ -1,7 +1,10 @@
 package com.example.dotascreen.ui.dotascreen
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -16,13 +19,17 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.dotascreen.R
 import com.example.dotascreen.ui.comments
 import com.example.dotascreen.ui.theme.AppTheme
+import com.gowtham.ratingbar.RatingBar
+import com.gowtham.ratingbar.RatingBarConfig
+import com.gowtham.ratingbar.RatingBarStyle
+
+const val rating: Float = 4.5f
 
 @Composable
 fun DotaScreen() {
@@ -43,12 +50,7 @@ fun DotaScreen() {
 //                modifier = Modifier.padding(top = 16.dp, bottom = 16.dp),
 //                contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
 //            )
-            Text(
-                text = stringResource(id = R.string.description),
-                style = AppTheme.TextStyle.Regular_12_19,
-                color = AppTheme.TextColors.secondary,
-                modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 128.dp, bottom = 14.dp),
-            )
+            DotaDescription()
         }
         item {
             Box(
@@ -65,15 +67,7 @@ fun DotaScreen() {
             }
         }
         item {
-            Text(
-                text = stringResource(R.string.reviews),
-                style = AppTheme.TextStyle.Regular_16_19,
-                color = AppTheme.TextColors.primary,
-                modifier = Modifier.padding(
-                    start = 24.dp,
-                    bottom = 16.dp
-                )
-            )
+            ReviewsAndRatingsBlock()
         }
         itemsIndexed(comments) { index, item ->
             CommentBlock(

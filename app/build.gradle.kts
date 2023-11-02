@@ -62,6 +62,7 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.accompanist.systemuicontroller)
     implementation(libs.androidx.constraintlayout.compose)
+    implementation(libs.compose.ratingbar)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

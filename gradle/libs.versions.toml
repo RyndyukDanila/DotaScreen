@@ -1,6 +1,7 @@
 [versions]
 accompanist-systemuicontroller = "0.30.0"
 agp = "8.1.2"
+compose-ratingbar = "1.2.3"
 constraintlayout-compose = "1.0.1"
 org-jetbrains-kotlin-android = "1.8.10"
 core-ktx = "1.9.0"
@@ -14,6 +15,7 @@ compose-bom = "2023.03.00"
 [libraries]
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist-systemuicontroller" }
 androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayout-compose" }
+compose-ratingbar = { module = "io.github.a914-gowtham:compose-ratingbar", version.ref = "compose-ratingbar" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }

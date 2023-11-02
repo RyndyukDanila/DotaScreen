@@ -1,6 +1,7 @@
 package com.example.dotascreen.ui.dotascreen
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,6 +11,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -25,7 +27,7 @@ fun CommentBlock(
     modifier: Modifier = Modifier
 ) {
     Column (modifier = modifier) {
-        Row {
+        Row (verticalAlignment = Alignment.CenterVertically) {
             Box(modifier = Modifier
                 .clip(CircleShape)
                 .size(36.dp)
@@ -36,11 +38,14 @@ fun CommentBlock(
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxSize()
+                        .align(Alignment.Center)
                 )
             }
             Column (
                 modifier = Modifier
                     .padding(start = 16.dp)
+                    .align(Alignment.CenterVertically),
+                verticalArrangement = Arrangement.spacedBy(7.dp)
             ) {
                 Text(
                     text = commentUi.user.name,
@@ -53,13 +58,12 @@ fun CommentBlock(
                     style = AppTheme.TextStyle.Regular_12_14,
                     color = AppTheme.TextColors.date,
                     modifier = Modifier
-                        .padding(top = 6.dp)
                 )
             }
         }
         Text(
             text = commentUi.comment.text,
-            style = AppTheme.TextStyle.Regular_12_19,
+            style = AppTheme.TextStyle.Regular_12_20,
             color = AppTheme.TextColors.secondary,
             modifier = Modifier
                 .padding(
