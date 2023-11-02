@@ -143,12 +143,12 @@ object AppTheme {
                         LineHeightStyle.Trim.None,
                     ),
                 )
-        val Regular_10_12
+        val Mono_10_12
             @Composable
             get() =
                 TextStyle(
                     fontFamily = FontFamily,
-                    fontWeight = FontWeight.Normal,
+                    fontWeight = FontWeight.Medium,
                     fontSize = 10.sp,
                     lineHeight = 12.sp,
                     platformStyle = PlatformTextStyle(includeFontPadding = false),

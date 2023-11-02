@@ -40,11 +40,11 @@ fun DotaScreen() {
             DotaScreenHeader()
         }
         item {
-//            ScrollableChipsRow(
-//                list = listOf("MOBA", "MULTIPLAYER", "STRATEGY"),
-//                modifier = Modifier.padding(top = 16.dp, bottom = 16.dp),
-//                contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
-//            )
+            ScrollableChipsRow(
+                list = listOf("MOBA", "MULTIPLAYER", "STRATEGY"),
+                modifier = Modifier.padding(top = 91.dp, bottom = 30.dp),
+                contentPadding = PaddingValues(start = 24.dp, end = 24.dp)
+            )
             DotaDescription()
         }
         item {
@@ -100,7 +100,7 @@ fun DotaScreen() {
                 ),
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 40.dp)
+                    .padding(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 64.dp)
                     .height(64.dp)
             ) {
                 Text(

@@ -67,7 +67,7 @@ fun CommentBlock(
             color = AppTheme.TextColors.secondary,
             modifier = Modifier
                 .padding(
-                    top = 10.dp,
+                    top = 16.dp,
                     bottom = 16.dp
                 )
         )
