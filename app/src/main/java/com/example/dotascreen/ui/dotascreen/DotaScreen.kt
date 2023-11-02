@@ -6,18 +6,22 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.dotascreen.R
+import com.example.dotascreen.ui.comments
 import com.example.dotascreen.ui.theme.AppTheme
 
 @Composable
@@ -57,6 +61,41 @@ fun DotaScreen() {
                     ),
                     contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
                     modifier = Modifier.height(128.dp)
+                )
+            }
+        }
+        item {
+            Text(
+                text = stringResource(R.string.reviews),
+                style = AppTheme.TextStyle.Regular_16_19,
+                color = AppTheme.TextColors.primary,
+                modifier = Modifier.padding(
+                    start = 24.dp,
+                    bottom = 16.dp
+                )
+            )
+        }
+        itemsIndexed(comments) { index, item ->
+            CommentBlock(
+                item,
+                modifier = Modifier
+                    .padding(
+                        start = 24.dp,
+                        end = 24.dp,
+                        top = 16.dp
+                    )
+            )
+            if (index < comments.lastIndex) {
+                Divider(
+                    color = AppTheme.BgColors.divider,
+                    thickness = 1.dp,
+                    modifier = Modifier
+                        .padding(
+                            top = 12.dp,
+                            bottom = 10.dp,
+                            start = 38.dp,
+                            end = 38.dp
+                        )
                 )
             }
         }

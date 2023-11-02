@@ -101,6 +101,34 @@ object AppTheme {
                         LineHeightStyle.Trim.None,
                     ),
                 )
+        val Regular_10_12
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 10.sp,
+                    lineHeight = 12.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None,
+                    ),
+                )
+        val Regular_12_14
+            @Composable
+            get() =
+                TextStyle(
+                    fontFamily = FontFamily,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 12.sp,
+                    lineHeight = 14.sp,
+                    platformStyle = PlatformTextStyle(includeFontPadding = false),
+                    lineHeightStyle = LineHeightStyle(
+                        LineHeightStyle.Alignment.Proportional,
+                        LineHeightStyle.Trim.None,
+                    ),
+                )
         val Regular_12_19
             @Composable
             get() =
@@ -115,14 +143,14 @@ object AppTheme {
                         LineHeightStyle.Trim.None,
                     ),
                 )
-        val Regular_10_12
+        val Regular_16_19
             @Composable
             get() =
                 TextStyle(
                     fontFamily = FontFamily,
                     fontWeight = FontWeight.Normal,
-                    fontSize = 10.sp,
-                    lineHeight = 12.sp,
+                    fontSize = 16.sp,
+                    lineHeight = 19.sp,
                     platformStyle = PlatformTextStyle(includeFontPadding = false),
                     lineHeightStyle = LineHeightStyle(
                         LineHeightStyle.Alignment.Proportional,
