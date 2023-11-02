@@ -2,6 +2,7 @@ package com.example.dotascreen.ui.dotascreen
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.AbsoluteCutCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Surface
@@ -17,6 +19,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawWithCache
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.BlendMode
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
@@ -56,11 +62,23 @@ private fun HeaderBackground(
             painter = painter,
             contentDescription = "",
             contentScale = ContentScale.Crop,
-            modifier = modifier
+            modifier = Modifier
+                .fillMaxSize()
+                .drawWithCache {
+                    val gradient = Brush.verticalGradient(
+                        colors = listOf(AppTheme.BgColors.shadow, Color.Transparent),
+                        endY = size.height/3
+                    )
+                    onDrawWithContent {
+                        drawContent()
+                        drawRect(gradient,blendMode = BlendMode.Multiply)
+                    }
+                }
         )
         
         Row (
-            modifier = Modifier.constrainAs(icon) {
+            modifier = Modifier
+                .constrainAs(icon) {
                 bottom.linkTo(parent.bottom, margin = (-64).dp)
                 start.linkTo(parent.start, margin = (22).dp)
             }

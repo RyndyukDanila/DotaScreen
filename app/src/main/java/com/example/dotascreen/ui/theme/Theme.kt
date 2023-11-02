@@ -45,6 +45,9 @@ object AppTheme {
             @Composable
             get() =
                 Color("#282E3E".toColorInt())
+        val shadow
+            get() =
+                Color("#050B18".toColorInt())
     }
 
     object ButtonColors {
