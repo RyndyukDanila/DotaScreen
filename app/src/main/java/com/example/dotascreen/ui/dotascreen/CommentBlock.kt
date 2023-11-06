@@ -16,7 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.dotascreen.R
 import com.example.dotascreen.ui.CommentUi
 import com.example.dotascreen.ui.theme.AppTheme
 
@@ -34,7 +36,7 @@ fun CommentBlock(
             ) {
                 Image(
                     painter = painterResource(commentUi.user.avatar),
-                    contentDescription = null,
+                    contentDescription = stringResource(R.string.description_profile_picture),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxSize()

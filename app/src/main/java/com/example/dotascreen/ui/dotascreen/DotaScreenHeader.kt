@@ -60,18 +60,18 @@ private fun HeaderBackground(
 
         Image(
             painter = painter,
-            contentDescription = "",
+            contentDescription = stringResource(R.string.description_game_image),
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .fillMaxSize()
                 .drawWithCache {
                     val gradient = Brush.verticalGradient(
                         colors = listOf(AppTheme.BgColors.shadow, Color.Transparent),
-                        endY = size.height/3
+                        endY = size.height / 3
                     )
                     onDrawWithContent {
                         drawContent()
-                        drawRect(gradient,blendMode = BlendMode.Multiply)
+                        drawRect(gradient, blendMode = BlendMode.Multiply)
                     }
                 }
         )
@@ -141,7 +141,7 @@ private fun HeaderBackground(
 private fun DotaLogo() {
     Image(painter = painterResource(
         R.drawable.dota_logo),
-        contentDescription = "",
+        contentDescription = stringResource(R.string.description_game_logo),
         Modifier
             .padding(all = 15.dp)
             .width(54.dp)
