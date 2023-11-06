@@ -63,6 +63,7 @@ private fun HeaderBackground(
             contentDescription = stringResource(R.string.description_game_image),
             contentScale = ContentScale.Crop,
             modifier = Modifier
+                .height(300.dp)
                 .fillMaxSize()
                 .drawWithCache {
                     val gradient = Brush.verticalGradient(
