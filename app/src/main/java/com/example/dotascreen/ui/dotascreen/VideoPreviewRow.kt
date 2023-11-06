@@ -39,7 +39,7 @@ fun VideoPreviewRow(
     previewResList: List<Int>,
     contentPadding: PaddingValues,
     modifier: Modifier,
-    ){
+) {
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(14.dp),
         contentPadding = contentPadding,

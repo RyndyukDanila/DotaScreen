@@ -39,7 +39,7 @@ fun DotaScreen() {
         state = lazyListState,
         modifier = Modifier
             .fillMaxSize(),
-        ) {
+    ) {
         item {
             DotaScreenHeader()
         }
@@ -97,8 +97,10 @@ fun DotaScreen() {
         }
         item {
             var selected by remember { mutableStateOf(false) }
-            val color = if (selected) AppTheme.ButtonColors.secondary else AppTheme.ButtonColors.primary
-            val buttonText = if (selected) stringResource(R.string.uninstall) else stringResource(R.string.install)
+            val color =
+                if (selected) AppTheme.ButtonColors.secondary else AppTheme.ButtonColors.primary
+            val buttonText =
+                if (selected) stringResource(R.string.uninstall) else stringResource(R.string.install)
             Button(
                 onClick = { selected = !selected },
                 shape = RoundedCornerShape(12.dp),

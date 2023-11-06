@@ -28,7 +28,7 @@ fun ReviewsAndRatingsBlock() {
                 bottom = 12.dp
             )
         )
-        Row (
+        Row(
             modifier = Modifier
                 .padding(start = 24.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -40,7 +40,7 @@ fun ReviewsAndRatingsBlock() {
                 modifier = Modifier
                     .padding(end = 16.dp)
             )
-            Column (
+            Column(
                 modifier = Modifier,
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {

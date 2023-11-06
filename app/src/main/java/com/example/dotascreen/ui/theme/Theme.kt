@@ -18,6 +18,7 @@ fun AppTheme(
         content = content
     )
 }
+
 object AppTheme {
     object BgColors {
         val primary

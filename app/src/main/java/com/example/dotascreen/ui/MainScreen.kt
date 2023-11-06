@@ -17,7 +17,7 @@ fun MainScreen() {
 
         ApplySystemBarColors()
 
-        Surface (
+        Surface(
             color = AppTheme.BgColors.primary,
             modifier = Modifier.fillMaxSize()
         ) {

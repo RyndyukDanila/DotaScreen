@@ -28,11 +28,12 @@ fun CommentBlock(
     commentUi: CommentUi,
     modifier: Modifier = Modifier
 ) {
-    Column (modifier = modifier) {
-        Row (verticalAlignment = Alignment.CenterVertically) {
-            Box(modifier = Modifier
-                .clip(CircleShape)
-                .size(36.dp)
+    Column(modifier = modifier) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Box(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .size(36.dp)
             ) {
                 Image(
                     painter = painterResource(commentUi.user.avatar),
@@ -43,7 +44,7 @@ fun CommentBlock(
                         .align(Alignment.Center)
                 )
             }
-            Column (
+            Column(
                 modifier = Modifier
                     .padding(start = 16.dp)
                     .align(Alignment.CenterVertically),
