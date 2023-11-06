@@ -15,6 +15,10 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.platform.LocalContext
@@ -92,11 +96,14 @@ fun DotaScreen() {
             }
         }
         item {
+            var selected by remember { mutableStateOf(false) }
+            val color = if (selected) AppTheme.ButtonColors.secondary else AppTheme.ButtonColors.primary
+            val buttonText = if (selected) stringResource(R.string.uninstall) else stringResource(R.string.install)
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { selected = !selected },
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = AppTheme.ButtonColors.primary
+                    containerColor = color
                 ),
                 modifier = Modifier
                     .fillMaxSize()
@@ -104,7 +111,7 @@ fun DotaScreen() {
                     .height(64.dp)
             ) {
                 Text(
-                    text = stringResource(R.string.install),
+                    text = buttonText,
                     style = AppTheme.TextStyle.Bold_20_24,
                     color = AppTheme.TextColors.button,
                     modifier = Modifier

@@ -34,7 +34,11 @@ import com.example.dotascreen.R
 import com.example.dotascreen.ui.theme.AppTheme
 
 @Composable
-fun VideoPreviewRow(previewResList: List<Int>, contentPadding: PaddingValues, modifier: Modifier) {
+fun VideoPreviewRow(
+    previewResList: List<Int>,
+    contentPadding: PaddingValues,
+    modifier: Modifier,
+    ){
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(14.dp),
         contentPadding = contentPadding,
@@ -53,11 +57,11 @@ fun VideoPreviewRow(previewResList: List<Int>, contentPadding: PaddingValues, mo
                         shape = RoundedCornerShape(14.dp)
                     )
                 )
-                Box (
+                Box(
                     modifier = Modifier
                         .size(48.dp)
                         .clip(CircleShape)
-                        .background(Color("#3DFFFFFF".toColorInt())),
+                        .background(AppTheme.BgColors.play),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
