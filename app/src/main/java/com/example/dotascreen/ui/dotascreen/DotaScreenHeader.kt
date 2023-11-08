@@ -38,7 +38,7 @@ import com.gowtham.ratingbar.RatingBarConfig
 import com.gowtham.ratingbar.RatingBarStyle
 
 @Composable
-fun DotaScreenHeader (
+fun DotaScreenHeader(
     modifier: Modifier = Modifier,
 ) {
     HeaderBackground(
@@ -60,30 +60,31 @@ private fun HeaderBackground(
 
         Image(
             painter = painter,
-            contentDescription = "",
+            contentDescription = stringResource(R.string.description_game_image),
             contentScale = ContentScale.Crop,
             modifier = Modifier
+                .height(300.dp)
                 .fillMaxSize()
                 .drawWithCache {
                     val gradient = Brush.verticalGradient(
                         colors = listOf(AppTheme.BgColors.shadow, Color.Transparent),
-                        endY = size.height/3
+                        endY = size.height / 3
                     )
                     onDrawWithContent {
                         drawContent()
-                        drawRect(gradient,blendMode = BlendMode.Multiply)
+                        drawRect(gradient, blendMode = BlendMode.Multiply)
                     }
                 }
         )
-        
-        Row (
+
+        Row(
             modifier = Modifier
                 .constrainAs(icon) {
-                bottom.linkTo(parent.bottom, margin = (-64).dp)
-                start.linkTo(parent.start, margin = (22).dp)
-            }
+                    bottom.linkTo(parent.bottom, margin = (-64).dp)
+                    start.linkTo(parent.start, margin = (22).dp)
+                }
         ) {
-            Card (
+            Card(
                 colors = CardDefaults.cardColors(
                     containerColor = Color.Black
                 ),
@@ -95,7 +96,7 @@ private fun HeaderBackground(
                     DotaLogo()
                 },
             )
-            Column (
+            Column(
                 modifier = Modifier
                     .padding(top = 34.dp, start = 12.dp)
             ) {
@@ -105,7 +106,7 @@ private fun HeaderBackground(
                     color = AppTheme.TextColors.primary,
                     modifier = Modifier
                 )
-                Row (
+                Row(
                     Modifier
                         .padding(top = 6.dp),
                     verticalAlignment = Alignment.CenterVertically
@@ -119,7 +120,7 @@ private fun HeaderBackground(
                             .size(12.dp)
                             .activeColor(AppTheme.BgColors.activeStar)
                             .inactiveColor(AppTheme.BgColors.inactiveStar)
-                        )
+                    )
                     Text(
                         text = stringResource(R.string.number_of_reviews),
                         style = AppTheme.TextStyle.Regular_12_14,
@@ -133,15 +134,17 @@ private fun HeaderBackground(
 
             }
         }
-        
+
     }
 }
 
 @Composable
 private fun DotaLogo() {
-    Image(painter = painterResource(
-        R.drawable.dota_logo),
-        contentDescription = "",
+    Image(
+        painter = painterResource(
+            R.drawable.dota_logo
+        ),
+        contentDescription = stringResource(R.string.description_game_logo),
         Modifier
             .padding(all = 15.dp)
             .width(54.dp)

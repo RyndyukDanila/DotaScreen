@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.toColorInt
@@ -34,7 +35,11 @@ import com.example.dotascreen.R
 import com.example.dotascreen.ui.theme.AppTheme
 
 @Composable
-fun VideoPreviewRow(previewResList: List<Int>, contentPadding: PaddingValues, modifier: Modifier) {
+fun VideoPreviewRow(
+    previewResList: List<Int>,
+    contentPadding: PaddingValues,
+    modifier: Modifier,
+) {
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(14.dp),
         contentPadding = contentPadding,
@@ -48,16 +53,16 @@ fun VideoPreviewRow(previewResList: List<Int>, contentPadding: PaddingValues, mo
             ) {
                 Image(
                     painter = painterResource(image),
-                    contentDescription = "",
+                    contentDescription = stringResource(R.string.description_game_video_preview_image),
                     modifier = modifier.clip(
                         shape = RoundedCornerShape(14.dp)
                     )
                 )
-                Box (
+                Box(
                     modifier = Modifier
                         .size(48.dp)
                         .clip(CircleShape)
-                        .background(Color("#3DFFFFFF".toColorInt())),
+                        .background(AppTheme.BgColors.play),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(

@@ -16,7 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.dotascreen.R
 import com.example.dotascreen.ui.CommentUi
 import com.example.dotascreen.ui.theme.AppTheme
 
@@ -26,22 +28,23 @@ fun CommentBlock(
     commentUi: CommentUi,
     modifier: Modifier = Modifier
 ) {
-    Column (modifier = modifier) {
-        Row (verticalAlignment = Alignment.CenterVertically) {
-            Box(modifier = Modifier
-                .clip(CircleShape)
-                .size(36.dp)
+    Column(modifier = modifier) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Box(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .size(36.dp)
             ) {
                 Image(
                     painter = painterResource(commentUi.user.avatar),
-                    contentDescription = null,
+                    contentDescription = stringResource(R.string.description_profile_picture),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxSize()
                         .align(Alignment.Center)
                 )
             }
-            Column (
+            Column(
                 modifier = Modifier
                     .padding(start = 16.dp)
                     .align(Alignment.CenterVertically),

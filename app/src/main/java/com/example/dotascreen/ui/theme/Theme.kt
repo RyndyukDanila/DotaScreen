@@ -18,13 +18,13 @@ fun AppTheme(
         content = content
     )
 }
+
 object AppTheme {
     object BgColors {
         val primary
             @Composable
             get() =
                 Color("#050B18".toColorInt())
-
         val tag
             @Composable
             get() =
@@ -48,6 +48,10 @@ object AppTheme {
         val shadow
             get() =
                 Color("#050B18".toColorInt())
+        val play
+            @Composable
+            get() =
+                Color("#3DFFFFFF".toColorInt())
     }
 
     object ButtonColors {
@@ -55,6 +59,10 @@ object AppTheme {
             @Composable
             get() =
                 Color("#F4D144".toColorInt())
+        val secondary
+            @Composable
+            get() =
+                Color("#CE3226".toColorInt())
     }
 
     object TextColors {

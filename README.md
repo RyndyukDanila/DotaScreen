@@ -13,3 +13,9 @@
 |1st                     |2nd                       |
 |:----------------------------:|:---------------------------:|
 |<img src="https://github.com/RyndyukDanila/DotaScreen/assets/79106632/561ed345-ecdf-46cc-90eb-b28f20448f73" width="360">|<img src="https://github.com/RyndyukDanila/DotaScreen/assets/79106632/1b32548f-7fd7-447d-b1d7-d5120aa8e7bf" width="360">|
+
+## Как выглядит экран на эмуляторе с маленькими размерами (Nexus One)
+||
+|:-:|
+|<img src="https://github.com/RyndyukDanila/DotaScreen/assets/79106632/0eba200b-f7f1-44c0-a036-6aa629acffcd" width="360">|
+

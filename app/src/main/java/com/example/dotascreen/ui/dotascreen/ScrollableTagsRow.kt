@@ -29,7 +29,7 @@ fun ScrollableChipsRow(
         modifier = modifier,
     ) {
         items(list) { item ->
-            Card (
+            Card(
                 colors = CardDefaults.cardColors(
                     containerColor = AppTheme.BgColors.tag,
                     disabledContainerColor = AppTheme.BgColors.tag,

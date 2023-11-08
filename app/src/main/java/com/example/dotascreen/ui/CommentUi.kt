@@ -14,7 +14,7 @@ val comments = listOf(
         user = User(
             "Auguste Conte",
             R.drawable.avatar_1
-            ),
+        ),
         comment = Comment(
             "February 14, 2019",
             "“Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers.”"
